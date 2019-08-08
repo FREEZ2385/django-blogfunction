@@ -24,6 +24,11 @@ def writeprocess(request):
                 blog.save()
             except Exception as e:
                 return HttpResponse("failed")
+<<<<<<< HEAD
+=======
+        else:
+            return HttpResponse("failed")
+>>>>>>> 5704cc1cf095cba56d8d78fa3791d388cf0f300c
     return redirect('/')
 
 def delete(request, num):
