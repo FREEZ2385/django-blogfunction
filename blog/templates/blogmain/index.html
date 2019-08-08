@@ -13,45 +13,44 @@
 <body>
 
   <div class="container">
+    <br>
     <ul class="nav">
       <li class="nav-item">
-        <a class="nav-link active" href="#"> Write </a>
+        <a class="nav-link active" href="/write"> Write </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link active" href="#"> Read </a>
+        <a class="nav-link active" href="/"> Read </a>
       </li>
 
     </ul>
 
   </div>
   <hr><br><br><br>
+  {% if blogs %}
   {% block content %}
   {% for blog in blogs %}
   <div class="container">
-    <div class="card">
+    <div class="card text-black bg-light mb-3">
       <div class="card-header">
         {{blog.blog_time}} <!-- 여기에 날짜를 적어보기 -->
+        <a href="delete/{{blog.blog_num}}" onclick="return confirm('Do you want to this Contexts?')" class="btn btn-danger btn-sm" style="float: right;">Delete</a>
       </div>
       <div class="card-body">
         <h3 class="card-title">{{blog.blog_title}}</h3> <!-- 여기에 제목을 적어보기 -->
         <p class="card-text"> {{blog.blog_subtitle}}</p> <!-- 여기에 내용을 적어보기 -->
-        <a href="#" class="btn btn-primary">More Details</a>
+        <a href="detail/{{blog.blog_num}}" class="btn btn-primary">More Details</a>
       </div>
     </div>
   </div><br>
-
   {% endfor %}
   {% endblock %}
-
-
-
-
-
+  {% else %}
+  <div class="container">
+    <center><h4>There is no Written. Write your First Contents</h2></center>
+  </div>
+  {% endif %}
   <script src='{% static "js/jquery.js" %}'></script>
-  <script src='{% static "js/bootstrap.js" %}'>
-    <!-- bootstrap 구간
-    -->
-  </script>
+  <script src='{% static "js/bootstrap.js" %}'></script>
 </body>
 
 </html>
