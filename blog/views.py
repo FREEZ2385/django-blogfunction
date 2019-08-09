@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.utils import timezone
+from .form import BlogPost
 from .models import Blog
 
 # Create your views here.
@@ -11,8 +12,18 @@ def index(request):
     return render(request, 'blogmain/index.html', context)
 
 def write(request):
-    return render(request, 'blogmain/write.html')
+        if request.method == "POST":
+            form = BlogPost(request.POST)
+            if form.is_valid():
+                post = form.save(commit=False)
+                post.blog_time = timezone.now()
+                post.save()
+                return redirect('/')
+        else:
+            form = BlogPost()
+            return render(request, 'blogmain/new.html', {'form': form})
 
+'''
 def writeprocess(request):
     blog = Blog()
     if request.method == "POST":
@@ -24,12 +35,19 @@ def writeprocess(request):
                 blog.save()
             except Exception as e:
                 return HttpResponse("failed")
-<<<<<<< HEAD
-=======
-        else:
-            return HttpResponse("failed")
->>>>>>> 5704cc1cf095cba56d8d78fa3791d388cf0f300c
     return redirect('/')
+'''
+def writeprocess(request):
+    if request.method == "POST":
+        form = BlogPost(request.POST)
+        if form.is_valid():
+            post = form.save(commit=False)
+            post.blog_time = timezone.now()
+            post.save()
+            return redirect('/')
+    else:
+        form = BlogPost()
+        return render(request, "new.html", {'form': form})
 
 def delete(request, num):
     try:

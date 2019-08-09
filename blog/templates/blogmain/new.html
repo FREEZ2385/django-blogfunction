@@ -1,0 +1,66 @@
+{% block content %}
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="{% static "css/bootstrap.css" %}">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="container">
+    <br>
+    <ul class="nav">
+      <li class="nav-item">
+        <a class="nav-link active" href="/write"> Write </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="/"> Read </a>
+      </li>
+
+    </ul>
+
+  </div>
+  <hr><br><br><br>
+
+  <div class="container">
+    <form method="POST">
+      {%csrf_token%}
+      {{ form.non_field_errors }}
+
+      {%csrf_token%}
+      <div class="form-group">
+        <label for="examplefortitle">Title</label><br>
+        {{ form.blog_title }}
+        <small id="title help" class="form-text text-muted">Title must written by 50 charaters</small>
+      </div>
+      <br>
+      <div class="form-group">
+        <label for="exampleforsubtitle">Subtitle</label><br>
+        {{ form.blog_subtitle }}
+        <small id="title help" class="form-text text-muted">Subtitle is shown by card in mainlayout / Subtitle must written by 100 charaters</small>
+      </div>
+      <br>
+      <div class="form-group">
+        <label for="exampleforcontent">Content</label><br>
+        {{ form.blog_contents }}
+        <small id="title help" class="form-text text-muted">Contents are not shown main layout</small>
+      </div>
+      <button type="submit" class="btn btn-primary" name="write"> alright! Write this! </button>
+
+
+
+    </form>
+  </div>
+
+  <script src='{% static "js/jquery.js" %}'></script>
+  <script src='{% static "js/bootstrap.js" %}'></script>
+
+  {%endblock%}
+</body>
+
+</html>
