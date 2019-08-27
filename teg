@@ -1,0 +1,69 @@
+[33mcommit 38b037f892d388ba25efa63af4a3169ae9ce0b49[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: Freez <schlee9703@naver.com>
+Date:   Tue Aug 27 15:53:18 2019 +0900
+
+    test
+
+[33mcommit ffbcad0be1855fcab861ff2e1f85e586be3abe82[m
+Author: Freez <schlee9703@naver.com>
+Date:   Mon Aug 26 17:37:45 2019 +0900
+
+    1
+    
+    2
+
+[33mcommit 61e80ae7bbe85768fd74eb27491afca4be5a2fa1[m
+Author: Freez <schlee9703@naver.com>
+Date:   Fri Aug 9 14:34:19 2019 +0900
+
+    Change Write form
+
+[33mcommit 28823a955f666d7f50f055bdc68a665a141d02f1[m
+Merge: 48aa737 5704cc1
+Author: Freez <schlee9703@naver.com>
+Date:   Thu Aug 8 15:02:04 2019 +0900
+
+    Create Write/Delete function
+
+[33mcommit 48aa7375240a8ded11897bb4780d9e8029a54033[m
+Author: Freez <schlee9703@naver.com>
+Date:   Thu Aug 8 15:00:10 2019 +0900
+
+    Create Write/Delete function
+
+[33mcommit 5704cc1cf095cba56d8d78fa3791d388cf0f300c[m
+Author: Freez <schlee9703@naver.com>
+Date:   Thu Aug 8 14:47:35 2019 +0900
+
+    Create Write/Delete function
+
+[33mcommit 654c3668ae7e7390e03d9eb502a33ad8acd5c6f0[m
+Author: Freez <schlee9703@naver.com>
+Date:   Wed Aug 7 14:12:00 2019 +0900
+
+    Create the blog main layout (with bootstrap)
+
+[33mcommit bf66eb9ee9d031c2c10f3d5af3adecac7d334cbf[m
+Merge: 062f29e 418e54e
+Author: Freez <schlee9703@naver.com>
+Date:   Tue Aug 6 15:51:27 2019 +0900
+
+    Merge branch 'master' of https://github.com/FREEZ2385/django-blogfunction
+
+[33mcommit 062f29e8d243f41cc63e96264d804097156b9e1d[m
+Author: Freez <schlee9703@naver.com>
+Date:   Tue Aug 6 15:44:22 2019 +0900
+
+    first commits
+
+[33mcommit 418e54e64221cf24d074258faa738cdfca7526e1[m
+Author: Freez <32388221+FREEZ2385@users.noreply.github.com>
+Date:   Tue Aug 6 15:38:24 2019 +0900
+
+    Delete .gitignore
+
+[33mcommit 93a626101625a2388a616460ac64b925d50e8726[m
+Author: Freez <32388221+FREEZ2385@users.noreply.github.com>
+Date:   Tue Aug 6 11:55:02 2019 +0900
+
+    Initial commit
